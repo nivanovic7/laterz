@@ -1,7 +1,7 @@
 import styles from "./Socialize.module.css";
 
 function Socialize() {
-  return <div></div>;
+  return <h1>Socialize</h1>;
 }
 
 export default Socialize;
