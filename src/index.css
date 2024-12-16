@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --clr-primary-blue: #4a287d;
+  --clr-primary-yellow: #f5b100;
+  --clr-primary-red: #ff004f;
+
+  --clr-secondary-blue: #9a77cf;
+  --clr-secondary-yellow: #ffd772;
+  --clr-secondary-red: #ff8372;
+
+  --clr-accent: #7495c2;
+
+  --clr-neutral-100: #fff;
+  --clr-neutral-300: #f1f1f1;
+  --clr-neutral-700: #505050;
+  --clr-neutral-650: #747474;
+
+  --ff: "Montserrat", sans-serif;
+
+  --fs-m: 12px;
+  --fs-l: 14px;
+  --fs-x: 22;
+  --fs-xl: 26px;
+
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-700: 700;
+
+  --b-radius-primary: 26px;
+  --b-radius-secondary: 20px;
+  --b-radius-tertiary: 16px;
+  --b-radius-circle: 50%;
+
+  --space-m: 20px;
+
+  --max-width: 1400px;
+}
+
+/* CSS RESET */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select,
+a {
+  font: inherit;
+  color: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* UTILITY CLASSES */
+.align-center {
+  align-items: center;
+}
+
+.bg-primary {
+  background-color: var(--clr-neutral-100);
+}
+
+.bg-neutral {
+  background-color: var(--clr-neutral-300);
+}
+
+.bg-accent-yellow {
+  background-color: var(--clr-secondary-yellow);
+}
+
+.clr-neutral {
+  color: var(--clr-neutral-100);
+}
+
+.clr-heading {
+  color: var(--clr-neutral-700);
+}
+
+.clr-body {
+  color: #747474;
+}
+
+.clr-accent {
+  color: var(--clr-accent);
+}
+
+.d-flex {
+  display: flex;
+}
+
+.fs-primary-heading {
+  font-size: var(--fs-x);
+}
+
+.fs-m {
+  font-size: var(--fs-m);
+}
+
+.fs-l {
+  font-size: var(--fs-l);
+}
+
+.fs-x {
+  font-size: var(--fs-xl);
+}
+
+.fs-xl {
+  font-size: var(--fs-xl);
+}
+
+.fw-bold {
+  font-weight: var(--fw-700);
+}
+
+.fw-medium {
+  font-weight: var(--fw-500);
+}
+
+.fw-regular {
+  font-weight: var(--fw-400);
+}
+
+.gap-10 {
+  gap: 10px;
+}
+
+.gap-20 {
+  gap: 20px;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+.px-8 {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.py-8 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+/* GENERAL STYLES */
+
+.d-grid-custom {
+  display: grid;
+  grid-template-columns: 300px 1fr 180px;
+}
