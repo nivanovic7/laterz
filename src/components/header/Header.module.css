@@ -1,0 +1,17 @@
+.header {
+  align-items: center;
+}
+
+.title {
+  background-image: linear-gradient(
+    to right,
+    var(--clr-secondary-yellow),
+    var(--clr-primary-yellow)
+  );
+
+  height: 80px;
+  padding-left: 34px;
+
+  border-bottom-left-radius: var(--b-radius-primary);
+  border-bottom-right-radius: var(--b-radius-primary);
+}

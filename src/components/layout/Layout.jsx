@@ -6,7 +6,7 @@ import styles from "./Layout.module.css";
 function Layout() {
   return (
     <div className={styles.layout}>
-      <div className={`${styles.layoutContent}`}>
+      <div className={`${styles.layoutContent} mx-auto`}>
         <Header />
         <main className={`${styles.main} d-grid-custom`}>
           <aside className={`${styles.aside}`}>Left aside</aside>
