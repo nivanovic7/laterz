@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./localHub.module.css";
+import styles from "./LocalHub.module.css";
 
 class LocalHub extends React.Component {
   render() {
