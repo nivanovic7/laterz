@@ -1,6 +1,9 @@
+import React from "react";
 import styles from "./ShoutOuts.module.css";
-function ShoutOuts() {
-  return <h1>Shoutouts</h1>;
+class ShoutOuts extends React.Component {
+  render() {
+    return <h1>Shoutouts</h1>;
+  }
 }
 
 export default ShoutOuts;

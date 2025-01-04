@@ -1,3 +1,15 @@
 .layoutContent {
   max-width: var(--max-width);
 }
+
+.main {
+  margin-top: var(--space-m);
+  margin-bottom: var(--space-m);
+}
+
+.aside {
+  position: sticky;
+  height: 500px;
+  top: 100px;
+  align-self: start;
+}

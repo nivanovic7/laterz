@@ -219,9 +219,14 @@ h6 {
   padding-bottom: 8px;
 }
 
-.px-20 {
+.px-m {
   padding-left: 20px;
   padding-right: 20px;
+}
+
+.py-m {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 /* GENERAL STYLES */
@@ -230,8 +235,14 @@ body {
   font-family: var(--ff);
 }
 
+h1 {
+  font-size: var(--fs-x);
+}
 .d-grid-custom {
   display: grid;
-  grid-template-columns: 300px 1fr 180px;
+  grid-template-columns: minmax(min-content, 300px) minmax(400px, 520px) minmax(
+      min-content,
+      180px
+    );
   column-gap: 60px;
 }
