@@ -1,9 +1,17 @@
+import styles from "./Posts.module.css";
+
 import React from "react";
 import Post from "../post/Post";
 
 class Posts extends React.Component {
   render() {
-    return this.props.posts.data.map((post) => <Post post={post} />);
+    return (
+      <div className={`${styles.posts} d-flex-col gap-20`}>
+        {this.props.posts.data.map((post) => (
+          <Post key={post._id} post={post} />
+        ))}
+      </div>
+    );
   }
 }
 

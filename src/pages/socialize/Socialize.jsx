@@ -6,7 +6,6 @@ import Posts from "../../components/posts/Posts";
 
 class Socialize extends React.Component {
   componentDidMount() {
-    console.log(this.props.user);
     this.props.fetchData();
   }
 

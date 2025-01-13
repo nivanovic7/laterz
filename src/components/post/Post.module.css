@@ -1,0 +1,13 @@
+.post {
+  overflow: hidden;
+}
+
+.postContent {
+  padding: 16px var(--space-m) var(--space-m) var(--space-m);
+  display: flex;
+  gap: 8px;
+}
+
+.avatar {
+  object-fit: cover;
+}

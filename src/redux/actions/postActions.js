@@ -6,7 +6,6 @@ export const fetchData = () => {
 
     try {
       const user = getState((state) => state.auth.user);
-      console.log(user);
       const response = await fetch(
         "https://laterz.api.exebyte.io/api/outfits",
         {

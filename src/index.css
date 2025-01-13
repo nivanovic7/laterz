@@ -32,7 +32,9 @@
   --b-radius-tertiary: 16px;
   --b-radius-circle: 50%;
 
+  --space-s: 10px;
   --space-m: 20px;
+  --space-l: 30px
 
   --max-width: 1120px;
 }
@@ -151,6 +153,11 @@ h6 {
   display: flex;
 }
 
+.d-flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
 .fs-primary-heading {
   font-size: var(--fs-x);
 }
@@ -190,6 +197,11 @@ h6 {
 .gap-20 {
   gap: 20px;
 }
+
+.img-36{
+  width: 36px;
+  height: 36px;
+} 
 
 .img-40 {
   width: 40px;
