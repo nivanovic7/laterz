@@ -6,6 +6,7 @@ import Posts from "../../components/posts/Posts";
 
 class Socialize extends React.Component {
   componentDidMount() {
+    console.log(this.props.user);
     this.props.fetchData();
   }
 
@@ -23,6 +24,8 @@ class Socialize extends React.Component {
 
 const mapStateToProps = (state) => ({
   data: state,
+  authLoading: state.auth.loading,
+  user: state.auth.user,
 });
 
 export default connect(mapStateToProps, { fetchData })(Socialize);
