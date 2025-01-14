@@ -13,7 +13,6 @@ class Socialize extends React.Component {
     const { posts, isLoading } = this.props.data.post;
     return (
       <div>
-        <h1>Socialize</h1>
         {isLoading && <p>Loading...</p>}
         {posts.data && <Posts posts={posts} />}
       </div>
