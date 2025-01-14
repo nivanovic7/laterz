@@ -12,6 +12,11 @@
   padding: 0 28px;
   justify-content: center;
   line-height: 1;
+  text-decoration: none;
+}
+
+.aside a {
+  text-decoration: none;
 }
 
 .socialise {
