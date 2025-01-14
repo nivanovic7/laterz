@@ -9,12 +9,16 @@ class Sidebar extends React.Component {
         className={`${styles.aside} d-flex-col gap-20 b-radius-primary bg-neutral px-m py-m`}
       >
         <NavLink to="/">
-          <div className={`${styles.socialise} fs-xl fw-medium clr-neutral`}>
+          <div
+            id="socialise"
+            className={`${styles.socialise} fs-xl fw-medium clr-neutral`}
+          >
             Socialise
           </div>
         </NavLink>
         <NavLink to="shoutouts">
           <div
+            id="shoutouts"
             className={`${styles.shoutouts} fs-xl fw-medium clr-neutral b-radius-tertiary`}
           >
             <span>Shout</span>
@@ -22,13 +26,19 @@ class Sidebar extends React.Component {
           </div>
         </NavLink>
         <NavLink to="localhub">
-          <div className={`${styles.localhub} fs-xl fw-medium clr-neutral`}>
+          <div
+            id="localhub"
+            className={`${styles.localhub} fs-xl fw-medium clr-neutral`}
+          >
             <span>Local</span>
             <span className={`fs-l`}>Hub</span>
           </div>
         </NavLink>
         <NavLink to="outfits">
-          <div className={`${styles.outfits} fs-xl fw-medium clr-neutral`}>
+          <div
+            id="outfits"
+            className={`${styles.outfits} fs-xl fw-medium clr-neutral`}
+          >
             Outfits
           </div>
         </NavLink>

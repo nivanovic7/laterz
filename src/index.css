@@ -105,9 +105,55 @@ h6 {
 /* GLOBAL STYLES */
 
 .active{
-  border: 2px solid red;
   position: relative;
-  right: var(--space-l)
+}
+.active div{
+  left: 20px;
+ }
+
+.active div::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: red;
+}
+
+.active #socialise::before{
+  background-image: linear-gradient(
+    to right,
+    var(--clr-secondary-blue),
+    var(--clr-primary-blue)
+  );
+}
+
+.active #shoutouts::before{
+  background-image: linear-gradient(
+    to right,
+    var(--clr-secondary-yellow),
+    var(--clr-primary-yellow)
+  );
+}
+
+.active #localhub::before{
+  background-image: linear-gradient(
+    to right,
+    var(--clr-secondary-red),
+    var(--clr-primary-red)
+  );
+}
+
+.active #outfits::before{
+  background-image: linear-gradient(
+    to bottom,
+    var(--clr-secondary-blue),
+    var(--clr-primary-blue)
+  );
 }
 
 /* UTILITY CLASSES */
