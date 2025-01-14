@@ -10,4 +10,9 @@
 
 .avatar {
   object-fit: cover;
+  aspect-ratio: 1 / 1;
+}
+
+.postText {
+  position: relative;
 }

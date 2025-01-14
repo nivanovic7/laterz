@@ -10,7 +10,7 @@ class Layout extends React.Component {
       <div className={styles.layout}>
         <div className={`${styles.layoutContent} mx-auto`}>
           <Header />
-          <main className={`${styles.main} d-grid-custom  `}>
+          <main className={`${styles.main} d-grid-custom`}>
             <aside
               className={`${styles.aside} b-radius-primary bg-neutral px-m py-m`}
             >

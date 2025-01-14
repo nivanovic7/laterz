@@ -13,8 +13,8 @@
 
   --clr-neutral-100: #fff;
   --clr-neutral-300: #f1f1f1;
-  --clr-neutral-700: #505050;
   --clr-neutral-650: #747474;
+  --clr-neutral-700: #505050;
 
   --ff: "Montserrat", sans-serif;
 
@@ -256,5 +256,6 @@ h1 {
       min-content,
       180px
     );
+justify-content: center;
   column-gap: 60px;
 }

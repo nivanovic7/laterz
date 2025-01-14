@@ -1,0 +1,21 @@
+.form {
+  position: relative;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 7px 14px;
+  font-size: var(--fs-m);
+  background-color: transparent;
+  border: 0;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  right: var(--space-s);
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: 0;
+}
