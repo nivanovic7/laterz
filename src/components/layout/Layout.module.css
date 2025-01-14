@@ -6,3 +6,9 @@
   margin-top: var(--space-m);
   margin-bottom: var(--space-m);
 }
+
+@media (max-width: 990px) {
+  .rightAside {
+    display: none;
+  }
+}

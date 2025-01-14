@@ -14,11 +14,32 @@
 
   height: 80px;
   padding-left: 34px;
-
   border-bottom-left-radius: var(--b-radius-primary);
   border-bottom-right-radius: var(--b-radius-primary);
 }
 
 .userImage {
   object-fit: cover;
+}
+
+@media (max-width: 990px) {
+  .header {
+    background-color: red;
+    margin: auto;
+    background-image: linear-gradient(
+      to right,
+      var(--clr-secondary-yellow),
+      var(--clr-primary-yellow)
+    );
+
+    border-bottom-right-radius: 24px;
+    border-bottom-left-radius: 24px;
+  }
+
+  .title {
+    background-image: none;
+  }
+  .userInfo {
+    display: none;
+  }
 }

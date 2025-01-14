@@ -15,7 +15,7 @@ class Layout extends React.Component {
             <Sidebar />
             <RoutesComponent />
             <aside
-              className={`${styles.aside} b-radius-primary bg-neutral px-m py-m`}
+              className={`${styles.aside} ${styles.rightAside} b-radius-primary bg-neutral px-m py-m`}
             >
               right Aside
             </aside>

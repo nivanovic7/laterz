@@ -2,6 +2,10 @@
   overflow: hidden;
 }
 
+.postImages img {
+  width: 100%;
+}
+
 .postContent {
   padding: 16px var(--space-m) var(--space-m) var(--space-m);
   display: flex;
