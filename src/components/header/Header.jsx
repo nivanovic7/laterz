@@ -1,9 +1,14 @@
 import React from "react";
 import Logo from "../logo/Logo";
 import styles from "./Header.module.css";
+import { connect } from "react-redux";
 
 class Header extends React.Component {
   render() {
+    console.log(this.props.user);
+    const userImageUrl =
+      this.props.user?.userProfileImage?.imageSmallSource || "";
+    const userName = this.props?.user?.user.userName || "";
     return (
       <header className={`${styles.header} d-grid-custom px-20 `}>
         <Logo />
@@ -14,15 +19,19 @@ class Header extends React.Component {
         </h1>
         <div className={` d-flex align-center gap-10`}>
           <img
-            className={`${styles.user} img-40 b-radius-circle`}
-            src="https://fastly.picsum.photos/id/170/200/200.jpg?hmac=2Xh3j3MMZE07_G7UDPgPRm557LRHzyFrkyeWRXdhdvU"
-            alt="user"
+            className={`${styles.userImage} img-40 b-radius-circle`}
+            src={`${userImageUrl}`}
+            alt="user image"
           />
-          <span className="fs-x fw-regular">UserName</span>
+          <span className="fs-x fw-regular">{userName}</span>
         </div>
       </header>
     );
   }
 }
 
-export default Header;
+const mapStateToProps = (state) => ({
+  user: state.auth.user,
+});
+
+export default connect(mapStateToProps)(Header);
