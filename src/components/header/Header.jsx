@@ -3,28 +3,20 @@ import Logo from "../logo/Logo";
 import styles from "./Header.module.css";
 import { connect } from "react-redux";
 import Dropdown from "../dropdown/Dropdown";
+import UserInfo from "../userInfo/UserInfo";
 
 class Header extends React.Component {
   render() {
-    const userImageUrl =
-      this.props.user?.userProfileImage?.imageSmallSource || "";
-    const userName = this.props?.user?.user.userName || "";
+    const { heading } = this.props.ui;
     return (
       <header className={`${styles.header} d-grid-custom px-20 `}>
         <Logo />
         <h1
           className={`${styles.title} d-flex align-center px-20  clr-heading fw-bold`}
         >
-          {this.props.ui.heading}
+          {heading}
         </h1>
-        <div className={`${styles.userInfo} d-flex align-center gap-10`}>
-          <img
-            className={`${styles.userImage} img-40 b-radius-circle`}
-            src={`${userImageUrl}`}
-            alt="user image"
-          />
-          <span className="fs-x fw-regular">{userName}</span>
-        </div>
+        <UserInfo />
         <Dropdown />
       </header>
     );
@@ -32,7 +24,6 @@ class Header extends React.Component {
 }
 
 const mapStateToProps = (state) => ({
-  user: state.auth.user,
   ui: state.ui,
 });
 

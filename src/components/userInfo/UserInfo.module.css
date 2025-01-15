@@ -1,0 +1,9 @@
+.userImage {
+  object-fit: cover;
+}
+
+@media (max-width: 990px) {
+  .userInfo {
+    display: none;
+  }
+}
