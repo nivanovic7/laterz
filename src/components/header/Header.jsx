@@ -15,7 +15,7 @@ class Header extends React.Component {
         <h1
           className={`${styles.title} d-flex align-center px-20  clr-heading fw-bold`}
         >
-          Shout outs
+          {this.props.ui.heading}
         </h1>
         <div className={`${styles.userInfo} d-flex align-center gap-10`}>
           <img
@@ -33,6 +33,7 @@ class Header extends React.Component {
 
 const mapStateToProps = (state) => ({
   user: state.auth.user,
+  ui: state.ui,
 });
 
 export default connect(mapStateToProps)(Header);

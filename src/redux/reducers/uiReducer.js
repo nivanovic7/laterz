@@ -1,7 +1,8 @@
-import { TOGGLE_MENU } from "../types";
+import { SET_HEADING, TOGGLE_MENU } from "../types";
 
 const initialState = {
   menuOpen: false,
+  heading: "Socialize",
 };
 
 export default function (state = initialState, action) {
@@ -10,6 +11,11 @@ export default function (state = initialState, action) {
       return {
         ...state,
         menuOpen: !state.menuOpen,
+      };
+    case SET_HEADING:
+      return {
+        ...state,
+        heading: action.payload,
       };
 
     default:

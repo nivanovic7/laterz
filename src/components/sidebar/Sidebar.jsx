@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Sidebar.module.css";
 import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
+import { SET_HEADING } from "../../redux/types";
 
 class Sidebar extends React.Component {
   render() {
@@ -11,7 +12,12 @@ class Sidebar extends React.Component {
           this.props.ui.menuOpen && styles.menuOpen
         } d-flex-col gap-20 b-radius-primary bg-neutral px-m py-m`}
       >
-        <NavLink to="/">
+        <NavLink
+          to="/"
+          onClick={() =>
+            this.props.dispatch({ type: SET_HEADING, payload: "Socialise" })
+          }
+        >
           <div
             id="socialise"
             className={`${styles.socialise} fs-xl fw-medium clr-neutral`}
@@ -19,7 +25,12 @@ class Sidebar extends React.Component {
             Socialise
           </div>
         </NavLink>
-        <NavLink to="shoutouts">
+        <NavLink
+          to="shout-outs"
+          onClick={() =>
+            this.props.dispatch({ type: SET_HEADING, payload: "Shout outs" })
+          }
+        >
           <div
             id="shoutouts"
             className={`${styles.shoutouts} fs-xl fw-medium clr-neutral b-radius-tertiary`}
@@ -28,7 +39,12 @@ class Sidebar extends React.Component {
             <span className={`fs-l`}>Outs</span>
           </div>
         </NavLink>
-        <NavLink to="localhub">
+        <NavLink
+          to="local-hub"
+          onClick={() =>
+            this.props.dispatch({ type: SET_HEADING, payload: "Local hub" })
+          }
+        >
           <div
             id="localhub"
             className={`${styles.localhub} fs-xl fw-medium clr-neutral`}
@@ -37,7 +53,12 @@ class Sidebar extends React.Component {
             <span className={`fs-l`}>Hub</span>
           </div>
         </NavLink>
-        <NavLink to="outfits">
+        <NavLink
+          to="outfits"
+          onClick={() =>
+            this.props.dispatch({ type: SET_HEADING, payload: "Outfits" })
+          }
+        >
           <div
             id="outfits"
             className={`${styles.outfits} fs-xl fw-medium clr-neutral`}

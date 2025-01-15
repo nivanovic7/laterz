@@ -10,10 +10,9 @@ class RoutesComponent extends React.Component {
     return (
       <Routes>
         <Route path="/" element={<Socialize />} />
-        {/* <Route path="/socialise" element={<Navigate to="/" replace />} /> */}
         <Route path="/outfits" element={<Outfits />} />
-        <Route path="/localhub" element={<LocalHub />} />
-        <Route path="/shoutouts" element={<ShoutOuts />} />
+        <Route path="/local-hub" element={<LocalHub />} />
+        <Route path="/shout-outs" element={<ShoutOuts />} />
       </Routes>
     );
   }
