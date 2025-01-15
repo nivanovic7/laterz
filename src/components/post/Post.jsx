@@ -4,6 +4,7 @@ import AddComment from "../addComment/AddComment";
 import InteractionButtons from "../interactionButtons/InteractionButtons";
 import PostImages from "../postImages/PostImages";
 import Avatar from "../avatar/Avatar";
+import PostText from "../postText/PostText";
 
 class Posts extends React.Component {
   render() {
@@ -16,19 +17,12 @@ class Posts extends React.Component {
             width={36}
             url={this.props.post.user[0].avatar?.imageSmallSource}
           />
-          <div className={`${styles.postText} d-flex-col gap-10`}>
+          <div className={`${styles.postBody} d-flex-col gap-10`}>
             <InteractionButtons />
-            <p className={`clr-heading fs-l fw-bold`}>
-              {this.props.post.user[0].name}
-            </p>
-            <p className={`clr-accent fs-l fw-bold`}>
-              {this.props.post.outfitDescription}
-            </p>
-            <p className={`clr-body fs-m`}>
-              Paradise Beach description here dolor sit amet, consectetur
-              adipiscing elit, eiusmod tempor incididunt. Dolor sit amet, e
-              adipiscing elit.
-            </p>
+            <PostText
+              description={this.props.post.outfitDescription}
+              userName={this.props.post.user[0].name}
+            />
             <AddComment />
           </div>
         </div>
