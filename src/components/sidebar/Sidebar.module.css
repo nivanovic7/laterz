@@ -61,6 +61,14 @@
 
 @media (max-width: 768px) {
   .aside {
-    display: none;
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    right: 100%;
+    transition: all 0.1s ease-in-out;
+  }
+
+  .menuOpen {
+    right: 0;
   }
 }

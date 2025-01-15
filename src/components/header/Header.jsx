@@ -6,7 +6,6 @@ import Dropdown from "../dropdown/Dropdown";
 
 class Header extends React.Component {
   render() {
-    console.log(this.props.user);
     const userImageUrl =
       this.props.user?.userProfileImage?.imageSmallSource || "";
     const userName = this.props?.user?.user.userName || "";

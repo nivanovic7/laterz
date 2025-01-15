@@ -1,13 +1,24 @@
 import React from "react";
 import styles from "./Dropdown.module.css";
+import { connect } from "react-redux";
+import { TOGGLE_MENU } from "../../redux/types";
 
 class Dropdown extends React.Component {
   render() {
     return (
       <div className={`${styles.dropdown}`}>
-        <img className="img-36" src="../assets/menu.svg" alt="menu icon" />
+        <img
+          onClick={() => this.props.dispatch({ type: TOGGLE_MENU })}
+          className="img-36"
+          src="../assets/menu.svg"
+          alt="menu icon"
+        />
       </div>
     );
   }
 }
-export default Dropdown;
+const mapStateToProps = (state) => ({
+  ui: state.ui,
+});
+
+export default connect(mapStateToProps)(Dropdown);

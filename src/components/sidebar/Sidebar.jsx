@@ -1,12 +1,15 @@
 import React from "react";
 import styles from "./Sidebar.module.css";
 import { NavLink } from "react-router-dom";
+import { connect } from "react-redux";
 
 class Sidebar extends React.Component {
   render() {
     return (
       <aside
-        className={`${styles.aside} d-flex-col gap-20 b-radius-primary bg-neutral px-m py-m`}
+        className={`${styles.aside} ${
+          this.props.ui.menuOpen && styles.menuOpen
+        } d-flex-col gap-20 b-radius-primary bg-neutral px-m py-m`}
       >
         <NavLink to="/">
           <div
@@ -47,4 +50,8 @@ class Sidebar extends React.Component {
   }
 }
 
-export default Sidebar;
+const mapStateToProps = (state) => ({
+  ui: state.ui,
+});
+
+export default connect(mapStateToProps)(Sidebar);
