@@ -13,6 +13,7 @@ class RoutesComponent extends React.Component {
         <Route path="/outfits" element={<Outfits />} />
         <Route path="/local-hub" element={<LocalHub />} />
         <Route path="/shout-outs" element={<ShoutOuts />} />
+        <Route path="/socialise" element={<Navigate to="/" />} />
       </Routes>
     );
   }

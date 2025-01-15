@@ -3,6 +3,7 @@ import styles from "./Sidebar.module.css";
 import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 import { SET_HEADING } from "../../redux/types";
+import SidebarLink from "../sidebarLink/SidebarLink";
 
 class Sidebar extends React.Component {
   render() {
@@ -12,20 +13,11 @@ class Sidebar extends React.Component {
           this.props.ui.menuOpen && styles.menuOpen
         } d-flex-col gap-20 b-radius-primary bg-neutral px-m py-m`}
       >
-        <NavLink
-          to="/"
-          onClick={() =>
-            this.props.dispatch({ type: SET_HEADING, payload: "Socialise" })
-          }
-        >
-          <div
-            id="socialise"
-            className={`${styles.socialise} fs-xl fw-medium clr-neutral`}
-          >
-            Socialise
-          </div>
-        </NavLink>
-        <NavLink
+        <SidebarLink id="socialise" heading="Socialise" />
+        <SidebarLink id="shout-outs" heading="Shout outs" />
+        <SidebarLink id="local-hub" heading="Local Hub" />
+        <SidebarLink id="outfits" heading="Outfits" />
+        {/* <NavLink
           to="shout-outs"
           onClick={() =>
             this.props.dispatch({ type: SET_HEADING, payload: "Shout outs" })
@@ -65,7 +57,7 @@ class Sidebar extends React.Component {
           >
             Outfits
           </div>
-        </NavLink>
+        </NavLink> */}
       </aside>
     );
   }

@@ -20,45 +20,6 @@
   text-decoration: none;
 }
 
-.socialise {
-  background-image: linear-gradient(
-    to right,
-    var(--clr-secondary-blue),
-    var(--clr-primary-blue)
-  );
-  border-top-left-radius: 26px;
-  border-top-right-radius: 26px;
-  border-bottom-right-radius: 26px;
-}
-
-.localhub {
-  background-image: linear-gradient(
-    to right,
-    var(--clr-secondary-red),
-    var(--clr-primary-red)
-  );
-  border-top-left-radius: 26px;
-  border-bottom-left-radius: 26px;
-}
-
-.shoutouts {
-  background-image: linear-gradient(
-    to right,
-    var(--clr-secondary-yellow),
-    var(--clr-primary-yellow)
-  );
-}
-
-.outfits {
-  background-image: linear-gradient(
-    to bottom,
-    var(--clr-secondary-blue),
-    var(--clr-primary-blue)
-  );
-  border-bottom-right-radius: 26px;
-  border-top-left-radius: 26px;
-}
-
 @media (max-width: 768px) {
   .aside {
     position: absolute;

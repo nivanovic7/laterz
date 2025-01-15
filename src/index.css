@@ -136,7 +136,7 @@ body {
   );
 }
 
-.active #shoutouts::before {
+.active #shout-outs::before {
   background-image: linear-gradient(
     to right,
     var(--clr-secondary-yellow),
@@ -144,7 +144,7 @@ body {
   );
 }
 
-.active #localhub::before {
+.active #local-hub::before {
   background-image: linear-gradient(
     to right,
     var(--clr-secondary-red),
