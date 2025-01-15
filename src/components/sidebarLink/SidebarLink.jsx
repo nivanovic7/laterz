@@ -4,12 +4,12 @@ import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 import { SET_HEADING } from "../../redux/types";
 class SidebarLink extends React.Component {
-  handleClick() {}
   render() {
     const { id, heading } = this.props;
+    const path = id === "socialise" ? "/" : id;
     return (
       <NavLink
-        to={id}
+        to={path}
         onClick={() => {
           this.props.dispatch({
             type: SET_HEADING,
@@ -17,7 +17,7 @@ class SidebarLink extends React.Component {
           });
         }}
       >
-        <div id={id} className={`${styles.id} fs-xl fw-medium clr-neutral`}>
+        <div id={id} className={`fs-xl fw-medium clr-neutral`}>
           {heading}
         </div>
       </NavLink>

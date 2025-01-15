@@ -25,6 +25,7 @@
     var(--clr-secondary-yellow),
     var(--clr-primary-yellow)
   );
+  border-radius: 16px;
 }
 
 :global(#outfits) {
