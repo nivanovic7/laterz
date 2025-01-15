@@ -5,7 +5,7 @@ class Dropdown extends React.Component {
   render() {
     return (
       <div className={`${styles.dropdown}`}>
-        <img className="img-40" src="../assets/menu.svg" alt="menu icon" />
+        <img className="img-36" src="../assets/menu.svg" alt="menu icon" />
       </div>
     );
   }
