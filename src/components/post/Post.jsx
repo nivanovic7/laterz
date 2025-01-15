@@ -2,26 +2,19 @@ import React from "react";
 import styles from "./Post.module.css";
 import AddComment from "../addComment/AddComment";
 import InteractionButtons from "../interactionButtons/InteractionButtons";
+import PostImages from "../postImages/PostImages";
+import Avatar from "../avatar/Avatar";
 
 class Posts extends React.Component {
   render() {
     return (
       <div className={`${styles.post} bg-neutral b-radius-secondary`}>
-        <div className={`${styles.postImages}`}>
-          <img
-            src={this.props.post.outfitImages[0].imageMediumSource}
-            alt="Post image"
-          />
-        </div>
+        <PostImages outfitImages={this.props.post.outfitImages} />
 
         <div className={`${styles.postContent}`}>
-          <img
-            className={`${styles.avatar} img-36 b-radius-circle`}
-            src={
-              this.props.post.user[0].avatar?.imageSmallSource ||
-              "https://picsum.photos/200"
-            }
-            alt="User avatar"
+          <Avatar
+            width={36}
+            url={this.props.post.user[0].avatar?.imageSmallSource}
           />
           <div className={`${styles.postText} d-flex-col gap-10`}>
             <InteractionButtons />

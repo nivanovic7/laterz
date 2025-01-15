@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./UserInfo.module.css";
 import { connect } from "react-redux";
+import Avatar from "../avatar/Avatar";
 
 class UserInfo extends React.Component {
   render() {
@@ -10,11 +11,7 @@ class UserInfo extends React.Component {
 
     return (
       <div className={`${styles.userInfo} d-flex align-center gap-10`}>
-        <img
-          className={`${styles.userImage} img-40 b-radius-circle`}
-          src={`${userImageUrl}`}
-          alt="user image"
-        />
+        <Avatar url={userImageUrl} width={40} />
         <span className="fs-x fw-regular">{userName}</span>
       </div>
     );
