@@ -1,5 +1,6 @@
 @media (max-width: 768px) {
   .logo {
     position: absolute;
+    left: 1rem;
   }
 }

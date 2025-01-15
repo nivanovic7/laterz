@@ -2,6 +2,7 @@ import React from "react";
 import Logo from "../logo/Logo";
 import styles from "./Header.module.css";
 import { connect } from "react-redux";
+import Dropdown from "../dropdown/Dropdown";
 
 class Header extends React.Component {
   render() {
@@ -11,9 +12,7 @@ class Header extends React.Component {
     const userName = this.props?.user?.user.userName || "";
     return (
       <header className={`${styles.header} d-grid-custom px-20 `}>
-        <div>
-          <Logo />
-        </div>
+        <Logo />
         <h1
           className={`${styles.title} d-flex align-center px-20  clr-heading fw-bold`}
         >
@@ -27,6 +26,7 @@ class Header extends React.Component {
           />
           <span className="fs-x fw-regular">{userName}</span>
         </div>
+        <Dropdown />
       </header>
     );
   }

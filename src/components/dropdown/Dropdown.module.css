@@ -1,0 +1,11 @@
+.dropdown {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .dropdown {
+    display: block;
+    position: absolute;
+    right: 1rem;
+  }
+}

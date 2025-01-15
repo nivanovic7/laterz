@@ -318,7 +318,6 @@ h1 {
 
   grid-template-columns: 3fr 5.2fr 1.8fr;
   column-gap: 60px;
-  justify-content: center;
 }
 
 @media (max-width: 990px) {

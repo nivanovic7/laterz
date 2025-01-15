@@ -5,6 +5,7 @@
 .main {
   margin-top: var(--space-m);
   margin-bottom: var(--space-m);
+  justify-content: center;
 }
 
 @media (max-width: 990px) {
