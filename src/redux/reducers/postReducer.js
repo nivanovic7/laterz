@@ -3,6 +3,8 @@ import { LOADING_DATA, SET_POSTS } from "../types";
 const initialState = {
   posts: [],
   loading: false,
+  page: 0,
+  hasMore: true,
 };
 
 export default function (state = initialState, action) {
@@ -15,7 +17,8 @@ export default function (state = initialState, action) {
     case SET_POSTS:
       return {
         ...state,
-        posts: action.payload,
+        posts: [...state.posts, ...action.payload],
+        page: state.page + 1,
         loading: false,
       };
 

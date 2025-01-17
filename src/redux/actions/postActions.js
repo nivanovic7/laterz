@@ -1,13 +1,17 @@
 import { ERROR, LOADING_DATA, SET_POSTS } from "../types";
 
+const POSTS_LIMIT = 1;
+
 export const fetchData = () => {
   return async (dispatch, getState) => {
+    const page = getState().post.page;
+    const offset = page * POSTS_LIMIT;
     dispatch({ type: LOADING_DATA });
 
     try {
       const user = getState((state) => state.auth.user);
       const response = await fetch(
-        "https://laterz.api.exebyte.io/api/outfits",
+        `https://laterz.api.exebyte.io/api/outfits?offset=${offset}&limit=${POSTS_LIMIT}`,
         {
           headers: {
             "Content-Type": "application/json",
@@ -17,7 +21,7 @@ export const fetchData = () => {
         }
       );
       const data = await response.json();
-      dispatch({ type: SET_POSTS, payload: data });
+      dispatch({ type: SET_POSTS, payload: data.data });
     } catch (error) {
       dispatch({ type: ERROR, error: error.message });
     }

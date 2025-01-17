@@ -5,9 +5,10 @@ import Post from "../post/Post";
 
 class Posts extends React.Component {
   render() {
+    console.log("BLIOSDLSDFSDSDF");
     return (
       <div className={`${styles.posts} d-flex-col gap-20`}>
-        {this.props.posts.data.map((post) => (
+        {this.props.posts.map((post) => (
           <Post key={post._id} post={post} />
         ))}
       </div>
