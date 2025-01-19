@@ -8,6 +8,13 @@
   justify-content: center;
 }
 
+.aside {
+  position: sticky;
+  height: 500px;
+  top: 100px;
+  align-self: start;
+}
+
 @media (max-width: 990px) {
   .rightAside {
     display: none;
