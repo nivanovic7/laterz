@@ -12,12 +12,12 @@ class Socialize extends React.Component {
   }
 
   handleScroll = () => {
-    const { isLoading, page } = this.props;
-    console.log(isLoading);
+    const { isLoading, page, hasMore } = this.props;
     if (
       window.innerHeight + document.documentElement.scrollTop + 10 >=
         document.documentElement.offsetHeight &&
-      !isLoading
+      !isLoading &&
+      hasMore
     ) {
       this.props.fetchData(page);
     }
@@ -28,11 +28,13 @@ class Socialize extends React.Component {
   }
 
   render() {
-    const { posts, isLoading } = this.props;
+    const { posts, isLoading, hasMore } = this.props;
     return (
-      <div className="soc">
-        {isLoading && <p>Loading...</p>}
+      <div>
         {posts && <Posts posts={posts} />}
+        {isLoading && <p>Loading...</p>}
+
+        {!hasMore && <p>You've seen it all</p>}
       </div>
     );
   }
@@ -43,6 +45,7 @@ const mapStateToProps = (state) => ({
   page: state.post.page,
   isLoading: state.post.isLoading,
   posts: state.post.posts,
+  hasMore: state.post.hasMore,
 });
 
 export default connect(mapStateToProps, { fetchData })(Socialize);

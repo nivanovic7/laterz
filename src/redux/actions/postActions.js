@@ -1,4 +1,4 @@
-import { ERROR, LOADING_DATA, SET_POSTS } from "../types";
+import { ERROR, LOADING_DATA, SET_HAS_MORE, SET_POSTS } from "../types";
 
 const POSTS_LIMIT = 2;
 
@@ -21,6 +21,7 @@ export const fetchData = (page) => {
         }
       );
       const data = await response.json();
+      if (!data.data[0]) dispatch({ type: SET_HAS_MORE, payload: false });
       dispatch({ type: SET_POSTS, payload: data.data });
     } catch (error) {
       dispatch({ type: ERROR, error: error.message });
