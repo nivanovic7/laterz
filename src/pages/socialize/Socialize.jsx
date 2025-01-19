@@ -3,6 +3,7 @@ import styles from "./Socialize.module.css";
 import { fetchData } from "../../redux/actions/postActions";
 import { connect } from "react-redux";
 import Posts from "../../components/posts/Posts";
+import Loader from "../../components/loader/Loader";
 
 class Socialize extends React.Component {
   componentDidMount() {
@@ -32,7 +33,7 @@ class Socialize extends React.Component {
     return (
       <div>
         {posts && <Posts posts={posts} />}
-        {isLoading && <p>Loading...</p>}
+        {isLoading && <Loader />}
 
         {!hasMore && <p>You've seen it all</p>}
       </div>
