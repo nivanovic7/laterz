@@ -1,6 +1,6 @@
 .loader {
   animation: spin 1s linear infinite;
-  margin: auto;
+  margin: 1rem auto;
 }
 
 @keyframes spin {

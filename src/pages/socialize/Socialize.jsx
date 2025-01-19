@@ -34,8 +34,7 @@ class Socialize extends React.Component {
       <div>
         {posts && <Posts posts={posts} />}
         {isLoading && <Loader />}
-
-        {!hasMore && <p>You've seen it all</p>}
+        {!hasMore && <p className={`${styles.message}`}>You've seen it all</p>}
       </div>
     );
   }

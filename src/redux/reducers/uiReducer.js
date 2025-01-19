@@ -16,6 +16,7 @@ export default function (state = initialState, action) {
       return {
         ...state,
         heading: action.payload,
+        menuOpen: !state.menuOpen,
       };
 
     default:
